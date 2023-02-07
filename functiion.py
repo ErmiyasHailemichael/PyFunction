@@ -3,13 +3,13 @@
 
 ###########################--START--#########################
 
-# def sum_to(n):
-#     if n == 1:
-#         return 1
-#     else:
-#         return n + sum_to(n-1)
-# n = int(input("Enter a number: "))
-# print(sum_to(n))
+def sum_to(n):
+    if n == 1:
+        return 1
+    else:
+        return n + sum_to(n-1)
+n = int(input("Enter a number: "))
+print(sum_to(n))
 
 # I add prompt to enter a number and print the sum of the integers from 1 to n.
 
@@ -20,16 +20,16 @@
 
 ###########################--START--#########################
 
-# def largest(numbers):
-#     largest_number = numbers[0]
-#     for number in numbers:
-#         if number > largest_number:
-#             largest_number = number 
-#     return largest_number
-# enter_numbers = input("Enter a list of numbers: ")
-# numbers = enter_numbers.split()
-# print(largest(numbers))
-# print('The largest number is: ', largest(numbers))
+def largest(numbers):
+    largest_number = numbers[0]
+    for number in numbers:
+        if number > largest_number:
+            largest_number = number 
+    return largest_number
+enter_numbers = input("Enter a list of numbers: ")
+numbers = enter_numbers.split()
+print(largest(numbers))
+print('The largest number is: ', largest(numbers))
 
 ###########################--END--#########################
 
@@ -39,18 +39,18 @@
 
 ###########################--START--#########################
 
-# def occurances(string, string2):
-#     count = 0
-#     for i in range(len(string)):
-#         if string[i] == string2:
-#             count += 1
-#     return count
-# string = input("Enter a string: ")
-# string2 = input("Enter a string2: ")
+def occurances(string, string2):
+    count = 0
+    for i in range(len(string)):
+        if string[i] == string2:
+            count += 1
+    return count
+string = input("Enter a string: ")
+string2 = input("Enter a string2: ")
 
-# result = occurances(string, string2)
+result = occurances(string, string2)
 
-# print("The number of occurances of the second string inside the first string is: ", result)
+print("The number of occurances of the second string inside the first string is: ", result)
 
 ###########################--END--#########################
 
