@@ -11,26 +11,22 @@ def sum_to(n):
 n = int(input("Enter a number: "))
 print(sum_to(n))
 
-# I add prompt to enter a number and print the sum of the integers from 1 to n.
 
 ###########################--END--#########################
 
-# Write a function named largestthat takes a list of numbers as an argument 
+# Write a function named largest that takes a list of numbers as an argument 
 # and returns the largest number in that list.
 
 ###########################--START--#########################
 
-def largest(numbers):
-    largest_number = numbers[0]
-    for number in numbers:
-        if number > largest_number:
-            largest_number = number 
-    return largest_number
-enter_numbers = input("Enter a list of numbers: ")
-numbers = enter_numbers.split()
-print(largest(numbers))
-print('The largest number is: ', largest(numbers))
-
+def largest_in_list (list):
+    largest = list[0]
+    for number in list:
+        if number > largest:
+            largest = number
+    return largest
+# print(largest_in_list([1,2,4,0]))
+# print(largest_in_list([10, 4, 2, 231, 91, 54]))
 ###########################--END--#########################
 
 
@@ -39,19 +35,16 @@ print('The largest number is: ', largest(numbers))
 
 ###########################--START--#########################
 
-def occurances(string, string2):
+def occurances(string, substring):
     count = 0
     for i in range(len(string)):
-        if string[i] == string2:
+        if string[i:].startswith(substring):
             count += 1
     return count
-string = input("Enter a string: ")
-string2 = input("Enter a string2: ")
-
-result = occurances(string, string2)
-
-print("The number of occurances of the second string inside the first string is: ", result)
-
+# print(occurances("fleep floop", "e"))
+# print(occurances("fleep floop", "p"))
+# print(occurances("fleep floop", "ee"))
+# print(occurances("fleep floop", "fe"))
 ###########################--END--#########################
 
 # Write a function named product that takes an arbitrary number of numbers, multiplies them together,
@@ -60,13 +53,11 @@ print("The number of occurances of the second string inside the first string is:
 ###########################--START--#########################
 
 def product(*args):
-    result = 1
+    total = 1
     for number in args:
-        result *= number
-    return result
-args = input("Enter a list of numbers: ")
-
-result = product(args)
-print('The product of the numbers is: ', result)
-
+        total *= number
+    return total
+# print(product(-1,4))
+# print(product(2,5,5))
+# print(product(4,0.5,5))
 ###########################--END--#########################
